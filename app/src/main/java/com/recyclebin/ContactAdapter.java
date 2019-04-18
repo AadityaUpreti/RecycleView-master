@@ -1,8 +1,10 @@
 package com.recyclebin;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.telecom.Call;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,8 +38,6 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.Contacts
         contactsViewHolder.imgProfile.setImageResource(contacts.getImageId());
         contactsViewHolder.tvName.setText(contacts.getName());
         contactsViewHolder.tvPhone.setText(contacts.getPhoneNo());
-
-
 
     }
     @Override
