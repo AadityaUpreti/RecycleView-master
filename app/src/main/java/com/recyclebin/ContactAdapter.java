@@ -45,6 +45,8 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.Contacts
         return contactsList.size();
     }
 
+
+
     public class ContactsViewHolder extends RecyclerView.ViewHolder{
         CircleImageView imgProfile;
         TextView tvName,tvPhone;

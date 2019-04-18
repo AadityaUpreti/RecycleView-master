@@ -25,10 +25,26 @@ public class MainActivity extends AppCompatActivity {
         contactsList.add(new Contacts("Bhuwan","9860345217",R.drawable.bhuwan));
         contactsList.add(new Contacts("Rajesh","9860345567",R.drawable.rajesh));
         contactsList.add(new Contacts("noavatar","no phone",R.drawable.noavatar));
+        contactsList.add(new Contacts("saugat Malla","9860345213",R.drawable.saugat));
+        contactsList.add(new Contacts("Bhuwan","9860345217",R.drawable.bhuwan));
+        contactsList.add(new Contacts("Rajesh","9860345567",R.drawable.rajesh));
+        contactsList.add(new Contacts("noavatar","no phone",R.drawable.noavatar));
+        contactsList.add(new Contacts("saugat Malla","9860345213",R.drawable.saugat));
+        contactsList.add(new Contacts("Bhuwan","9860345217",R.drawable.bhuwan));
+        contactsList.add(new Contacts("Rajesh","9860345567",R.drawable.rajesh));
+        contactsList.add(new Contacts("noavatar","no phone",R.drawable.noavatar));
+        contactsList.add(new Contacts("saugat Malla","9860345213",R.drawable.saugat));
+        contactsList.add(new Contacts("Bhuwan","9860345217",R.drawable.bhuwan));
+        contactsList.add(new Contacts("Rajesh","9860345567",R.drawable.rajesh));
+        contactsList.add(new Contacts("noavatar","no phone",R.drawable.noavatar));
+        contactsList.add(new Contacts("saugat Malla","9860345213",R.drawable.saugat));
+        contactsList.add(new Contacts("Bhuwan","9860345217",R.drawable.bhuwan));
+        contactsList.add(new Contacts("Rajesh","9860345567",R.drawable.rajesh));
+        contactsList.add(new Contacts("noavatar","no phone",R.drawable.noavatar));
         //pass this list to adapter
 
         ContactAdapter contactAdapter = new ContactAdapter(this,contactsList);
         recyclerView.setAdapter(contactAdapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(new GridLayoutManager(this,2));
     }
 }
