@@ -34,10 +34,28 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.Contacts
     @Override
     public void onBindViewHolder
             (@NonNull ContactsViewHolder contactsViewHolder, int i){
-        Contacts contacts = contactsList.get(i);
+        final Contacts contacts = contactsList.get(i);
         contactsViewHolder.imgProfile.setImageResource(contacts.getImageId());
         contactsViewHolder.tvName.setText(contacts.getName());
         contactsViewHolder.tvPhone.setText(contacts.getPhoneNo());
+        contactsViewHolder.tvAddress.setText(contacts.getAddress());
+        contactsViewHolder.tvEmail.setText(contacts.getEmail());
+
+
+        contactsViewHolder.imgProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(mContext, DetailsActivity.class);
+
+                intent.putExtra("image",contacts.getImageId());
+                intent.putExtra("name",contacts.getName());
+                intent.putExtra("phone",contacts.getPhoneNo());
+                intent.putExtra("address",contacts.getAddress());
+                intent.putExtra("email",contacts.getEmail());
+
+                mContext.startActivity(intent);
+            }
+        });
 
     }
     @Override
@@ -49,12 +67,14 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.Contacts
 
     public class ContactsViewHolder extends RecyclerView.ViewHolder{
         CircleImageView imgProfile;
-        TextView tvName,tvPhone;
+        TextView tvName,tvPhone,tvAddress,tvEmail;
         public ContactsViewHolder(@NonNull View itemView){
             super(itemView);
             imgProfile = itemView.findViewById(R.id.imgProfile);
             tvName = itemView.findViewById(R.id.tvName);
             tvPhone = itemView.findViewById(R.id.tvPhone);
+            tvAddress = itemView.findViewById(R.id.tvAddress);
+            tvEmail = itemView.findViewById(R.id.tvEmail);
         }
 
 

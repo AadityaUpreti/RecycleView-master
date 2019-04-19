@@ -21,26 +21,19 @@ public class MainActivity extends AppCompatActivity {
 
         //Create a list of Contact
         List<Contacts> contactsList = new ArrayList<>();
-        contactsList.add(new Contacts("saugat Malla","9860345213",R.drawable.saugat));
-        contactsList.add(new Contacts("Bhuwan","9860345217",R.drawable.bhuwan));
-        contactsList.add(new Contacts("Rajesh","9860345567",R.drawable.rajesh));
-        contactsList.add(new Contacts("noavatar","no phone",R.drawable.noavatar));
-        contactsList.add(new Contacts("saugat Malla","9860345213",R.drawable.saugat));
-        contactsList.add(new Contacts("Bhuwan","9860345217",R.drawable.bhuwan));
-        contactsList.add(new Contacts("Rajesh","9860345567",R.drawable.rajesh));
-        contactsList.add(new Contacts("noavatar","no phone",R.drawable.noavatar));
-        contactsList.add(new Contacts("saugat Malla","9860345213",R.drawable.saugat));
-        contactsList.add(new Contacts("Bhuwan","9860345217",R.drawable.bhuwan));
-        contactsList.add(new Contacts("Rajesh","9860345567",R.drawable.rajesh));
-        contactsList.add(new Contacts("noavatar","no phone",R.drawable.noavatar));
-        contactsList.add(new Contacts("saugat Malla","9860345213",R.drawable.saugat));
-        contactsList.add(new Contacts("Bhuwan","9860345217",R.drawable.bhuwan));
-        contactsList.add(new Contacts("Rajesh","9860345567",R.drawable.rajesh));
-        contactsList.add(new Contacts("noavatar","no phone",R.drawable.noavatar));
-        contactsList.add(new Contacts("saugat Malla","9860345213",R.drawable.saugat));
-        contactsList.add(new Contacts("Bhuwan","9860345217",R.drawable.bhuwan));
-        contactsList.add(new Contacts("Rajesh","9860345567",R.drawable.rajesh));
-        contactsList.add(new Contacts("noavatar","no phone",R.drawable.noavatar));
+        contactsList.add(new Contacts("saugat Malla","9860345213","sun","sun@gmail",R.drawable.saugat));
+        contactsList.add(new Contacts("Bhuwan","9860345217","Moon","moon@gmail",R.drawable.bhuwan));
+        contactsList.add(new Contacts("Rajesh","9860345567","Star","star@gmail",R.drawable.rajesh));
+        contactsList.add(new Contacts("noavatar","no phone","Earth","earth@gmail",R.drawable.noavatar));
+        contactsList.add(new Contacts("saugat Malla","9860345213","sun","sun@gmail",R.drawable.saugat));
+        contactsList.add(new Contacts("Bhuwan","9860345217","Moon","moon@gmail",R.drawable.bhuwan));
+        contactsList.add(new Contacts("Rajesh","9860345567","Star","star@gmail",R.drawable.rajesh));
+        contactsList.add(new Contacts("noavatar","no phone","Earth","earth@gmail",R.drawable.noavatar));
+        contactsList.add(new Contacts("saugat Malla","9860345213","sun","sun@gmail",R.drawable.saugat));
+        contactsList.add(new Contacts("Bhuwan","9860345217","Moon","moon@gmail",R.drawable.bhuwan));
+        contactsList.add(new Contacts("Rajesh","9860345567","Star","star@gmail",R.drawable.rajesh));
+        contactsList.add(new Contacts("noavatar","no phone","Earth","earth@gmail",R.drawable.noavatar));
+
         //pass this list to adapter
 
         ContactAdapter contactAdapter = new ContactAdapter(this,contactsList);
