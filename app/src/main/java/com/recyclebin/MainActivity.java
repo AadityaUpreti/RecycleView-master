@@ -39,5 +39,34 @@ public class MainActivity extends AppCompatActivity {
         ContactAdapter contactAdapter = new ContactAdapter(this,contactsList);
         recyclerView.setAdapter(contactAdapter);
         recyclerView.setLayoutManager(new GridLayoutManager(this,2));
+
+        editText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                filter(s.toString());
+            }
+
+
+            public void filter(String text) {
+                ArrayList<Contacts> filteredList = new ArrayList<>();
+                for (Contacts contacts : contactsList) {
+                    if (contacts.getName().toLowerCase().contains((text.toLowerCase()))) {
+                        filteredList.add(contacts);
+                    }
+
+                }
+                contactAdapter.filterList(filteredList);
+            }
+        });
     }
 }
